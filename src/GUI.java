@@ -20,12 +20,17 @@ public class GUI{
     private Statement st = null;
     private JTable table;
     JComboBox comboBox;
+    JComboBox sortBy;
 
     private static final String[] data = {"Торговая накладная", "Информация об организациии", "Заказчик",
             "Информация о продукте", "Информация о должностном лице", "Инфрмация о плательщике", "Информация о выписке",
             "Информация об ответственном лице", "Информация о банке", "Информация о производителе"};
+    private static final String[] infOfProd = {"Id", "Manufacturer", "Date of supply", "Id of product"};
 
-
+/*  ############################
+        Не забывать коммитить
+    ############################
+ */
 
 
     public void  CreateGUI() throws SQLException, ClassNotFoundException {
@@ -73,11 +78,15 @@ public class GUI{
         comboBox = new JComboBox(data);
         panel.add(comboBox, BorderLayout.PAGE_START);
 
+        sortBy = new JComboBox();
+        panel.add(sortBy, BorderLayout.PAGE_END);
+
         JButton button = new JButton("Добавить данные");
         pane.add(button);
         JButton deleteRow = new JButton("Удалить запись");
         pane.add(deleteRow);
-
+        JButton updateBut = new JButton("Изменить данные");
+        pane.add(updateBut);
 
 
         button.setPreferredSize(new Dimension(150,50));
@@ -101,6 +110,7 @@ public class GUI{
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if(comboBox.getSelectedItem() == "Торговая накладная"){
+                    sortBy.removeAllItems();
                     textField1.setVisible(true);
                     textField2.setVisible(true);
                     textField3.setVisible(true);
@@ -167,8 +177,35 @@ public class GUI{
                             }
                         }
                     });
+                    sortBy.addItem("Id_wb");
+                    sortBy.addItem("NoWB");
+                    sortBy.addItem("NameProduct");
+                    sortBy.addItem("Organization");
+                    sortBy.addItem("DateOfIssue");
+                    sortBy.addItem("Official");
+                    sortBy.addItem("Supplier");
+
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_wb") || (sortBy.getSelectedItem() == "NoWB")
+                                    || (sortBy.getSelectedItem() == "NameProduct") || (sortBy.getSelectedItem() == "Organization")
+                                    || (sortBy.getSelectedItem() == "DateOfIssue") || (sortBy.getSelectedItem() == "Official")
+                                    || (sortBy.getSelectedItem() == "Supplier")){
+                                try {
+                                    sortBy("waybill", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Заказчик"){
+                    sortBy.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -223,8 +260,26 @@ public class GUI{
                             }
                         }
                     });
+                    sortBy.addItem("Id_consignee");
+                    sortBy.addItem("Name");
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_consignee") || (sortBy.getSelectedItem() == "Name")){
+                                try {
+                                    sortBy("consignee", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация об организациии"){
+                    sortBy.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -279,8 +334,29 @@ public class GUI{
                             }
                         }
                     });
+                    sortBy.addItem("Id_organ");
+                    sortBy.addItem("FIOofficial");
+                    sortBy.addItem("NoLicense");
+                    sortBy.addItem("DateOfIssue");
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_organ") || (sortBy.getSelectedItem() == "FIOofficial")
+                                    || (sortBy.getSelectedItem() == "NoLicense") || (sortBy.getSelectedItem() == "DateOfIssue")){
+                                try {
+                                    sortBy("inforganization", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о должностном лице"){
+                    sortBy.removeAllItems();
                     textField4.setVisible(false);
                     textField5.setVisible(false);
                     textField6.setVisible(false);
@@ -335,8 +411,28 @@ public class GUI{
                             }
                         }
                     });
+                    sortBy.addItem("Id_off");
+                    sortBy.addItem("FIO");
+                    sortBy.addItem("ThePost");
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_payer") || (sortBy.getSelectedItem() == "NameIE")
+                                    || (sortBy.getSelectedItem() == "Tel")){
+                                try {
+                                    sortBy("infofficial", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Инфрмация о плательщике"){
+                    sortBy.removeAllItems();
                     textField6.setVisible(false);
                     textField7.setVisible(false);
                     textField8.setVisible(false);
@@ -391,8 +487,28 @@ public class GUI{
                             }
                         }
                     });
+                    sortBy.addItem("Id_payer");
+                    sortBy.addItem("NameIE");
+                    sortBy.addItem("Tel");
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_payer") || (sortBy.getSelectedItem() == "NameIE")
+                                    || (sortBy.getSelectedItem() == "Tel")){
+                                try {
+                                    sortBy("infpayer", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о выписке"){
+                    sortBy.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -446,8 +562,29 @@ public class GUI{
                             }
                         }
                     });
+                    sortBy.addItem("Id_issue");
+                    sortBy.addItem("DateOfIssue");
+                    sortBy.addItem("ResponsibleOfficial");
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_issue") || (sortBy.getSelectedItem() == "DateOfIssue")
+                                    || (sortBy.getSelectedItem() == "ResponsibleOfficial")){
+                                try {
+                                    sortBy("infissue", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
                 }
                 if(comboBox.getSelectedItem() == "Информация об ответственном лице"){
+                    sortBy.removeAllItems();
                     textField4.setVisible(false);
                     textField5.setVisible(false);
                     textField6.setVisible(false);
@@ -501,9 +638,29 @@ public class GUI{
                             }
                         }
                     });
+                    sortBy.addItem("Id_supply");
+                    sortBy.addItem("FIO");
+                    sortBy.addItem("ThePost");
+
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_supply") || (sortBy.getSelectedItem() == "FIO")
+                                    || (sortBy.getSelectedItem() == "ThePost")){
+                                try {
+                                    sortBy("infsupply", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о банке"){
-
+                    sortBy.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -558,8 +715,30 @@ public class GUI{
                             }
                         }
                     });
+                    sortBy.addItem("Id_BD");
+                    sortBy.addItem("ChekingAccount");
+                    sortBy.addItem("NameBank");
+
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_BD") || (sortBy.getSelectedItem() == "ChekingAccount")
+                                    || (sortBy.getSelectedItem() == "NameBank")){
+                                try {
+                                    sortBy("bankdetails", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о производителе"){
+                    sortBy.removeAllItems();
+                    //sortBy.addItem("");
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -614,9 +793,39 @@ public class GUI{
                             }
                         }
                     });
+                    updateBut.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+
+
+                        }
+                    });
+
+                    sortBy.addItem("Id_Man");
+                    sortBy.addItem("Manufacturer");
+                    sortBy.addItem("DateOfSupply");
+
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_Man") || (sortBy.getSelectedItem() == "DateOfSupply ") || (sortBy.getSelectedItem() == "Manufacturer")){
+                                try {
+                                    sortBy("infmanufacturer", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+
                 }
 
                 if(comboBox.getSelectedItem() == "Информация о продукте"){
+                    sortBy.removeAllItems();
                     textField7.setVisible(false);
                     textField8.setVisible(false);
                     textField9.setVisible(false);
@@ -676,6 +885,28 @@ public class GUI{
                             }
                         }
                     });
+
+                    sortBy.addItem("Id_prod");
+                    sortBy.addItem("Name");
+                    sortBy.addItem("Price");
+                    sortBy.addItem("Count");
+                    sortBy.addItem("Supplier");
+                    sortBy.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(sortBy.getSelectedItem());
+                            if((sortBy.getSelectedItem() == "Id_prod") || (sortBy.getSelectedItem() == "Name ") || (sortBy.getSelectedItem() == "Price")
+                            || (sortBy.getSelectedItem() == "Count") || (sortBy.getSelectedItem() == "Supplier")){
+                                try {
+                                    sortBy("infproduct", sq);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
                 }
             }
         });
@@ -703,4 +934,23 @@ public class GUI{
     }
 
 
+
+    public void sortBy(String string, String s1) throws SQLException, ClassNotFoundException {
+        String requestSort = "select * from " + string + " order by " + s1 + ";";
+        ResultSet rss = st.executeQuery(requestSort);
+        model.setDataSource(rss);
+    }
+
 }
+/*
+                                   **
+       ****************           *****
+      ******************          *******
+     ********************        **********
+    **********************        *********
+      *                *          ********
+      *   ***          *            ***
+      *   ***          *            **
+      *                *            **
+      ******************           ****
+ */
