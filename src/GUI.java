@@ -75,6 +75,10 @@ public class GUI{
 
         JButton button = new JButton("Добавить данные");
         pane.add(button);
+        JButton deleteRow = new JButton("Удалить запись");
+        pane.add(deleteRow);
+
+
 
         button.setPreferredSize(new Dimension(150,50));
         pane.add(textField1).setVisible(true);
@@ -97,7 +101,18 @@ public class GUI{
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if(comboBox.getSelectedItem() == "Торговая накладная"){
-
+                    textField1.setVisible(true);
+                    textField2.setVisible(true);
+                    textField3.setVisible(true);
+                    textField4.setVisible(true);
+                    textField5.setVisible(true);
+                    textField6.setVisible(true);
+                    textField7.setVisible(true);
+                    textField8.setVisible(true);
+                    textField9.setVisible(true);
+                    textField10.setVisible(true);
+                    textField11.setVisible(true);
+                    textField12.setVisible(true);
                     try {
                         String requestSQL = dorm.Waybill();
                         ResultSet rs = st.executeQuery(requestSQL);
@@ -140,6 +155,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("waybill");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Заказчик"){
                     textField5.setVisible(false);
@@ -184,6 +211,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("consignee");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация об организациии"){
                     textField5.setVisible(false);
@@ -228,6 +267,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("inforganization");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о должностном лице"){
                     textField4.setVisible(false);
@@ -272,6 +323,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("infofficial");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Инфрмация о плательщике"){
                     textField6.setVisible(false);
@@ -316,6 +379,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("infpayer");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о выписке"){
                     textField5.setVisible(false);
@@ -359,6 +434,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("infissue");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация об ответственном лице"){
                     textField4.setVisible(false);
@@ -402,6 +489,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("infsupply");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о банке"){
 
@@ -447,23 +546,32 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("bankdetails");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о производителе"){
-
+                    textField5.setVisible(false);
+                    textField6.setVisible(false);
+                    textField7.setVisible(false);
+                    textField8.setVisible(false);
+                    textField9.setVisible(false);
+                    textField10.setVisible(false);
+                    textField11.setVisible(false);
+                    textField12.setVisible(false);
                     try {
                         String requestSQL = dorm.infManufacturer();
                         ResultSet rs = st.executeQuery(requestSQL);
                         model.setDataSource(rs);
-                        textField5.setVisible(false);
-                        textField6.setVisible(false);
-                        textField7.setVisible(false);
-                        textField8.setVisible(false);
-                        textField9.setVisible(false);
-                        textField10.setVisible(false);
-                        textField11.setVisible(false);
-                        textField12.setVisible(false);
-
-
 
 
                         button.addActionListener(new ActionListener() {
@@ -494,6 +602,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("infmanufacturer");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
 
                 if(comboBox.getSelectedItem() == "Информация о продукте"){
@@ -544,6 +664,18 @@ public class GUI{
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
+                    deleteRow.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                delete("infproduct");
+                            } catch (SQLException e1) {
+                                e1.printStackTrace();
+                            } catch (ClassNotFoundException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
             }
         });
@@ -556,6 +688,19 @@ public class GUI{
 
     }
 
+    public void delete(String string) throws SQLException, ClassNotFoundException {
+        int row = table.getSelectedRow();
+        int column = table.getSelectedColumn();
+        Object value = table.getValueAt(row, column);
+
+
+        st.executeUpdate("DELETE FROM armbyh." + string + " WHERE "
+                + table.getColumnName(column) + "='"
+                + value +"';");
+        String rss = "select * from " + string + ";";
+        ResultSet resultSet = st.executeQuery(rss);
+        model.setDataSource(resultSet);
+    }
 
 
 }

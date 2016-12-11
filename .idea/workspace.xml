@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc74dcab-fef8-4c1a-9f94-e28d10437cac" name="Default" comment="" />
+    <list default="true" id="bc74dcab-fef8-4c1a-9f94-e28d10437cac" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.java" afterPath="$PROJECT_DIR$/src/GUI.java" />
+    </list>
     <ignored path="Kyrsovaya.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,6 +39,12 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -46,57 +55,52 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="91" selection-start-line="23" selection-start-column="91" selection-end-line="23" selection-end-column="91" />
+            <state relative-caret-position="180">
+              <caret line="106" column="48" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="48" />
               <folding>
                 <element signature="docComment;class#GUI#0" expanded="false" />
-                <element signature="class#3650:5787" expanded="false" />
-                <element signature="class#6758:8160" expanded="false" />
-                <element signature="class#11604:12908" expanded="false" />
-                <element signature="class#16297:17707" expanded="false" />
-                <element signature="class#18746:20047" expanded="false" />
-                <element signature="class#23459:24872" expanded="false" />
-                <element signature="class#25752:27312" expanded="false" />
-                <marker date="1481450234379" expanded="true" signature="4631:5032" ph="INSERT INTO armbyh.waybill... " />
-                <marker date="1481450234379" expanded="true" signature="7205:7397" ph="INSERT INTO armbyh.consignee... " />
-                <marker date="1481450234379" expanded="true" signature="9596:9803" ph="INSERT INTO armbyh.infofficial... " />
-                <marker date="1481450234379" expanded="true" signature="11985:12149" ph="INSERT INTO armbyh.infpayer... " />
-                <marker date="1481450234379" expanded="true" signature="14350:14565" ph="INSERT INTO armbyh.infissue... " />
-                <marker date="1481450234379" expanded="true" signature="16743:16951" ph="INSERT INTO armbyh.infissue... " />
-                <marker date="1481450234379" expanded="true" signature="19126:19290" ph="INSERT INTO armbyh.bankdetails... " />
-                <marker date="1481450234379" expanded="false" signature="21042:22433" ph="{...}" />
-                <marker date="1481450234379" expanded="true" signature="21471:21648" ph="INSERT INTO armbyh.bankdetails... " />
-                <marker date="1481450234379" expanded="true" signature="21471:21674" ph="INSERT INTO armbyh.infmanufacturer... " />
-                <marker date="1481450234379" expanded="true" signature="23905:24039" ph="INSERT INTO armbyh.infmanufacturer... " />
-                <marker date="1481450234379" expanded="true" signature="23905:24109" ph="INSERT INTO armbyh.infmanufacturer... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26410" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26419" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26420" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26493" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26497" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26502" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26515" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26529" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26530" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26543" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26544" ph="INSERT INTO armbyh.infproduct... " />
-                <marker date="1481450234379" expanded="true" signature="26331:26557" ph="INSERT INTO armbyh.infproduct... " />
+                <element signature="class#6742:7256" expanded="false" />
+                <element signature="method#actionPerformed#0;class#6742:7256" expanded="false" />
+                <element signature="class#8007:9409" expanded="false" />
+                <element signature="class#9684:10200" expanded="false" />
+                <element signature="class#10969:12386" expanded="false" />
+                <element signature="method#actionPerformed#0;class#10969:12386" expanded="false" />
+                <element signature="class#14001:15305" expanded="false" />
+                <element signature="class#19837:21247" expanded="false" />
+                <element signature="class#22856:24157" expanded="false" />
+                <element signature="class#27390:27908" expanded="false" />
+                <element signature="method#actionPerformed#0;class#27390:27908" expanded="false" />
+                <element signature="class#28678:30091" expanded="false" />
+                <element signature="class#30366:30888" expanded="false" />
+                <element signature="class#31548:33108" expanded="false" />
+                <element signature="class#33385:33902" expanded="false" />
+                <marker date="1481453272591" expanded="true" signature="5311:5712" ph="INSERT INTO armbyh.waybill... " />
+                <marker date="1481453272591" expanded="true" signature="8454:8646" ph="INSERT INTO armbyh.consignee... " />
+                <marker date="1481453272591" expanded="true" signature="11416:11623" ph="INSERT INTO armbyh.infofficial... " />
+                <marker date="1481453272591" expanded="true" signature="14382:14546" ph="INSERT INTO armbyh.infpayer... " />
+                <marker date="1481453272591" expanded="true" signature="17320:17535" ph="INSERT INTO armbyh.infissue... " />
+                <marker date="1481453272591" expanded="true" signature="20283:20491" ph="INSERT INTO armbyh.infissue... " />
+                <marker date="1481453272591" expanded="true" signature="23236:23400" ph="INSERT INTO armbyh.bankdetails... " />
+                <marker date="1481453272591" expanded="false" signature="25723:27114" ph="{...}" />
+                <marker date="1481453272591" expanded="true" signature="26152:26329" ph="INSERT INTO armbyh.bankdetails... " />
+                <marker date="1481453272591" expanded="true" signature="26152:26355" ph="INSERT INTO armbyh.infmanufacturer... " />
+                <marker date="1481453272591" expanded="true" signature="29124:29258" ph="INSERT INTO armbyh.infmanufacturer... " />
+                <marker date="1481453272591" expanded="true" signature="29124:29328" ph="INSERT INTO armbyh.infmanufacturer... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32206" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32215" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32216" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="false" signature="32127:32289" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32293" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32298" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32311" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32325" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32326" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32339" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32340" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="32127:32353" ph="INSERT INTO armbyh.infproduct... " />
+                <marker date="1481453272591" expanded="true" signature="34342:34464" ph="DELETE FROM " />
+                <marker date="1481453272591" expanded="true" signature="34491:34505" ph="select * fro... missingValue" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="armbyh.bankdetails" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.bankdetails">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -109,6 +113,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -148,7 +155,7 @@
     <option name="width" value="1382" />
     <option name="height" value="784" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -677,15 +684,15 @@
       <workItem from="1481314689151" duration="1121000" />
       <workItem from="1481316559996" duration="706000" />
       <workItem from="1481320736795" duration="819000" />
-      <workItem from="1481396525231" duration="23635000" />
+      <workItem from="1481396525231" duration="26517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53180000" />
+    <option name="totallyTimeSpent" value="56062000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -696,7 +703,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32565284" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32565284" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -723,7 +730,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -744,37 +751,47 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#GUI#0" expanded="false" />
-            <element signature="class#3650:5787" expanded="false" />
-            <element signature="class#6758:8160" expanded="false" />
-            <element signature="class#11604:12908" expanded="false" />
-            <element signature="class#16297:17707" expanded="false" />
-            <element signature="class#18746:20047" expanded="false" />
-            <element signature="class#23459:24872" expanded="false" />
-            <element signature="class#25752:27312" expanded="false" />
-            <marker date="1481450234379" expanded="true" signature="4631:5032" ph="INSERT INTO armbyh.waybill... " />
-            <marker date="1481450234379" expanded="true" signature="7205:7397" ph="INSERT INTO armbyh.consignee... " />
-            <marker date="1481450234379" expanded="true" signature="9596:9803" ph="INSERT INTO armbyh.infofficial... " />
-            <marker date="1481450234379" expanded="true" signature="11985:12149" ph="INSERT INTO armbyh.infpayer... " />
-            <marker date="1481450234379" expanded="true" signature="14350:14565" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="16743:16951" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="19126:19290" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="false" signature="21042:22433" ph="{...}" />
-            <marker date="1481450234379" expanded="true" signature="21471:21648" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="true" signature="21471:21674" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24039" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24109" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26410" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26419" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26420" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26493" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26497" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26502" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26515" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26529" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26530" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26543" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26544" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26557" ph="INSERT INTO armbyh.infproduct... " />
+            <element signature="class#6742:7256" expanded="false" />
+            <element signature="method#actionPerformed#0;class#6742:7256" expanded="false" />
+            <element signature="class#8007:9409" expanded="false" />
+            <element signature="class#9684:10200" expanded="false" />
+            <element signature="class#10969:12386" expanded="false" />
+            <element signature="method#actionPerformed#0;class#10969:12386" expanded="false" />
+            <element signature="class#14001:15305" expanded="false" />
+            <element signature="class#19837:21247" expanded="false" />
+            <element signature="class#22856:24157" expanded="false" />
+            <element signature="class#27390:27908" expanded="false" />
+            <element signature="method#actionPerformed#0;class#27390:27908" expanded="false" />
+            <element signature="class#28678:30091" expanded="false" />
+            <element signature="class#30366:30888" expanded="false" />
+            <element signature="class#31548:33108" expanded="false" />
+            <element signature="class#33385:33902" expanded="false" />
+            <marker date="1481453272591" expanded="true" signature="5311:5712" ph="INSERT INTO armbyh.waybill... " />
+            <marker date="1481453272591" expanded="true" signature="8454:8646" ph="INSERT INTO armbyh.consignee... " />
+            <marker date="1481453272591" expanded="true" signature="11416:11623" ph="INSERT INTO armbyh.infofficial... " />
+            <marker date="1481453272591" expanded="true" signature="14382:14546" ph="INSERT INTO armbyh.infpayer... " />
+            <marker date="1481453272591" expanded="true" signature="17320:17535" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="20283:20491" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="23236:23400" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="false" signature="25723:27114" ph="{...}" />
+            <marker date="1481453272591" expanded="true" signature="26152:26329" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="true" signature="26152:26355" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29258" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29328" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32206" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32215" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32216" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="false" signature="32127:32289" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32293" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32298" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32311" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32325" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32326" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32339" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32340" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32353" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="34342:34464" ph="DELETE FROM " />
+            <marker date="1481453272591" expanded="true" signature="34491:34505" ph="select * fro... missingValue" />
           </folding>
         </state>
       </provider>
@@ -785,37 +802,47 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#GUI#0" expanded="false" />
-            <element signature="class#3650:5787" expanded="false" />
-            <element signature="class#6758:8160" expanded="false" />
-            <element signature="class#11604:12908" expanded="false" />
-            <element signature="class#16297:17707" expanded="false" />
-            <element signature="class#18746:20047" expanded="false" />
-            <element signature="class#23459:24872" expanded="false" />
-            <element signature="class#25752:27312" expanded="false" />
-            <marker date="1481450234379" expanded="true" signature="4631:5032" ph="INSERT INTO armbyh.waybill... " />
-            <marker date="1481450234379" expanded="true" signature="7205:7397" ph="INSERT INTO armbyh.consignee... " />
-            <marker date="1481450234379" expanded="true" signature="9596:9803" ph="INSERT INTO armbyh.infofficial... " />
-            <marker date="1481450234379" expanded="true" signature="11985:12149" ph="INSERT INTO armbyh.infpayer... " />
-            <marker date="1481450234379" expanded="true" signature="14350:14565" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="16743:16951" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="19126:19290" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="false" signature="21042:22433" ph="{...}" />
-            <marker date="1481450234379" expanded="true" signature="21471:21648" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="true" signature="21471:21674" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24039" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24109" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26410" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26419" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26420" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26493" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26497" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26502" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26515" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26529" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26530" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26543" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26544" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26557" ph="INSERT INTO armbyh.infproduct... " />
+            <element signature="class#6742:7256" expanded="false" />
+            <element signature="method#actionPerformed#0;class#6742:7256" expanded="false" />
+            <element signature="class#8007:9409" expanded="false" />
+            <element signature="class#9684:10200" expanded="false" />
+            <element signature="class#10969:12386" expanded="false" />
+            <element signature="method#actionPerformed#0;class#10969:12386" expanded="false" />
+            <element signature="class#14001:15305" expanded="false" />
+            <element signature="class#19837:21247" expanded="false" />
+            <element signature="class#22856:24157" expanded="false" />
+            <element signature="class#27390:27908" expanded="false" />
+            <element signature="method#actionPerformed#0;class#27390:27908" expanded="false" />
+            <element signature="class#28678:30091" expanded="false" />
+            <element signature="class#30366:30888" expanded="false" />
+            <element signature="class#31548:33108" expanded="false" />
+            <element signature="class#33385:33902" expanded="false" />
+            <marker date="1481453272591" expanded="true" signature="5311:5712" ph="INSERT INTO armbyh.waybill... " />
+            <marker date="1481453272591" expanded="true" signature="8454:8646" ph="INSERT INTO armbyh.consignee... " />
+            <marker date="1481453272591" expanded="true" signature="11416:11623" ph="INSERT INTO armbyh.infofficial... " />
+            <marker date="1481453272591" expanded="true" signature="14382:14546" ph="INSERT INTO armbyh.infpayer... " />
+            <marker date="1481453272591" expanded="true" signature="17320:17535" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="20283:20491" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="23236:23400" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="false" signature="25723:27114" ph="{...}" />
+            <marker date="1481453272591" expanded="true" signature="26152:26329" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="true" signature="26152:26355" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29258" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29328" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32206" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32215" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32216" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="false" signature="32127:32289" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32293" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32298" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32311" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32325" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32326" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32339" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32340" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32353" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="34342:34464" ph="DELETE FROM " />
+            <marker date="1481453272591" expanded="true" signature="34491:34505" ph="select * fro... missingValue" />
           </folding>
         </state>
       </provider>
@@ -836,37 +863,47 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#GUI#0" expanded="false" />
-            <element signature="class#3650:5787" expanded="false" />
-            <element signature="class#6758:8160" expanded="false" />
-            <element signature="class#11604:12908" expanded="false" />
-            <element signature="class#16297:17707" expanded="false" />
-            <element signature="class#18746:20047" expanded="false" />
-            <element signature="class#23459:24872" expanded="false" />
-            <element signature="class#25752:27312" expanded="false" />
-            <marker date="1481450234379" expanded="true" signature="4631:5032" ph="INSERT INTO armbyh.waybill... " />
-            <marker date="1481450234379" expanded="true" signature="7205:7397" ph="INSERT INTO armbyh.consignee... " />
-            <marker date="1481450234379" expanded="true" signature="9596:9803" ph="INSERT INTO armbyh.infofficial... " />
-            <marker date="1481450234379" expanded="true" signature="11985:12149" ph="INSERT INTO armbyh.infpayer... " />
-            <marker date="1481450234379" expanded="true" signature="14350:14565" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="16743:16951" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="19126:19290" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="false" signature="21042:22433" ph="{...}" />
-            <marker date="1481450234379" expanded="true" signature="21471:21648" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="true" signature="21471:21674" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24039" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24109" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26410" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26419" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26420" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26493" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26497" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26502" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26515" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26529" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26530" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26543" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26544" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26557" ph="INSERT INTO armbyh.infproduct... " />
+            <element signature="class#6742:7256" expanded="false" />
+            <element signature="method#actionPerformed#0;class#6742:7256" expanded="false" />
+            <element signature="class#8007:9409" expanded="false" />
+            <element signature="class#9684:10200" expanded="false" />
+            <element signature="class#10969:12386" expanded="false" />
+            <element signature="method#actionPerformed#0;class#10969:12386" expanded="false" />
+            <element signature="class#14001:15305" expanded="false" />
+            <element signature="class#19837:21247" expanded="false" />
+            <element signature="class#22856:24157" expanded="false" />
+            <element signature="class#27390:27908" expanded="false" />
+            <element signature="method#actionPerformed#0;class#27390:27908" expanded="false" />
+            <element signature="class#28678:30091" expanded="false" />
+            <element signature="class#30366:30888" expanded="false" />
+            <element signature="class#31548:33108" expanded="false" />
+            <element signature="class#33385:33902" expanded="false" />
+            <marker date="1481453272591" expanded="true" signature="5311:5712" ph="INSERT INTO armbyh.waybill... " />
+            <marker date="1481453272591" expanded="true" signature="8454:8646" ph="INSERT INTO armbyh.consignee... " />
+            <marker date="1481453272591" expanded="true" signature="11416:11623" ph="INSERT INTO armbyh.infofficial... " />
+            <marker date="1481453272591" expanded="true" signature="14382:14546" ph="INSERT INTO armbyh.infpayer... " />
+            <marker date="1481453272591" expanded="true" signature="17320:17535" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="20283:20491" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="23236:23400" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="false" signature="25723:27114" ph="{...}" />
+            <marker date="1481453272591" expanded="true" signature="26152:26329" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="true" signature="26152:26355" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29258" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29328" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32206" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32215" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32216" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="false" signature="32127:32289" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32293" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32298" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32311" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32325" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32326" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32339" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32340" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32353" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="34342:34464" ph="DELETE FROM " />
+            <marker date="1481453272591" expanded="true" signature="34491:34505" ph="select * fro... missingValue" />
           </folding>
         </state>
       </provider>
@@ -877,37 +914,47 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#GUI#0" expanded="false" />
-            <element signature="class#3650:5787" expanded="false" />
-            <element signature="class#6758:8160" expanded="false" />
-            <element signature="class#11604:12908" expanded="false" />
-            <element signature="class#16297:17707" expanded="false" />
-            <element signature="class#18746:20047" expanded="false" />
-            <element signature="class#23459:24872" expanded="false" />
-            <element signature="class#25752:27312" expanded="false" />
-            <marker date="1481450234379" expanded="true" signature="4631:5032" ph="INSERT INTO armbyh.waybill... " />
-            <marker date="1481450234379" expanded="true" signature="7205:7397" ph="INSERT INTO armbyh.consignee... " />
-            <marker date="1481450234379" expanded="true" signature="9596:9803" ph="INSERT INTO armbyh.infofficial... " />
-            <marker date="1481450234379" expanded="true" signature="11985:12149" ph="INSERT INTO armbyh.infpayer... " />
-            <marker date="1481450234379" expanded="true" signature="14350:14565" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="16743:16951" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="19126:19290" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="false" signature="21042:22433" ph="{...}" />
-            <marker date="1481450234379" expanded="true" signature="21471:21648" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="true" signature="21471:21674" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24039" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24109" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26410" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26419" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26420" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26493" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26497" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26502" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26515" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26529" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26530" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26543" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26544" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26557" ph="INSERT INTO armbyh.infproduct... " />
+            <element signature="class#6742:7256" expanded="false" />
+            <element signature="method#actionPerformed#0;class#6742:7256" expanded="false" />
+            <element signature="class#8007:9409" expanded="false" />
+            <element signature="class#9684:10200" expanded="false" />
+            <element signature="class#10969:12386" expanded="false" />
+            <element signature="method#actionPerformed#0;class#10969:12386" expanded="false" />
+            <element signature="class#14001:15305" expanded="false" />
+            <element signature="class#19837:21247" expanded="false" />
+            <element signature="class#22856:24157" expanded="false" />
+            <element signature="class#27390:27908" expanded="false" />
+            <element signature="method#actionPerformed#0;class#27390:27908" expanded="false" />
+            <element signature="class#28678:30091" expanded="false" />
+            <element signature="class#30366:30888" expanded="false" />
+            <element signature="class#31548:33108" expanded="false" />
+            <element signature="class#33385:33902" expanded="false" />
+            <marker date="1481453272591" expanded="true" signature="5311:5712" ph="INSERT INTO armbyh.waybill... " />
+            <marker date="1481453272591" expanded="true" signature="8454:8646" ph="INSERT INTO armbyh.consignee... " />
+            <marker date="1481453272591" expanded="true" signature="11416:11623" ph="INSERT INTO armbyh.infofficial... " />
+            <marker date="1481453272591" expanded="true" signature="14382:14546" ph="INSERT INTO armbyh.infpayer... " />
+            <marker date="1481453272591" expanded="true" signature="17320:17535" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="20283:20491" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="23236:23400" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="false" signature="25723:27114" ph="{...}" />
+            <marker date="1481453272591" expanded="true" signature="26152:26329" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="true" signature="26152:26355" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29258" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29328" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32206" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32215" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32216" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="false" signature="32127:32289" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32293" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32298" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32311" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32325" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32326" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32339" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32340" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32353" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="34342:34464" ph="DELETE FROM " />
+            <marker date="1481453272591" expanded="true" signature="34491:34505" ph="select * fro... missingValue" />
           </folding>
         </state>
       </provider>
@@ -928,37 +975,47 @@
           <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
           <folding>
             <element signature="docComment;class#GUI#0" expanded="false" />
-            <element signature="class#3650:5787" expanded="false" />
-            <element signature="class#6758:8160" expanded="false" />
-            <element signature="class#11604:12908" expanded="false" />
-            <element signature="class#16297:17707" expanded="false" />
-            <element signature="class#18746:20047" expanded="false" />
-            <element signature="class#23459:24872" expanded="false" />
-            <element signature="class#25752:27312" expanded="false" />
-            <marker date="1481450234379" expanded="true" signature="4631:5032" ph="INSERT INTO armbyh.waybill... " />
-            <marker date="1481450234379" expanded="true" signature="7205:7397" ph="INSERT INTO armbyh.consignee... " />
-            <marker date="1481450234379" expanded="true" signature="9596:9803" ph="INSERT INTO armbyh.infofficial... " />
-            <marker date="1481450234379" expanded="true" signature="11985:12149" ph="INSERT INTO armbyh.infpayer... " />
-            <marker date="1481450234379" expanded="true" signature="14350:14565" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="16743:16951" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="19126:19290" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="false" signature="21042:22433" ph="{...}" />
-            <marker date="1481450234379" expanded="true" signature="21471:21648" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="true" signature="21471:21674" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24039" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24109" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26410" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26419" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26420" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26493" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26497" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26502" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26515" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26529" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26530" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26543" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26544" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26557" ph="INSERT INTO armbyh.infproduct... " />
+            <element signature="class#6742:7256" expanded="false" />
+            <element signature="method#actionPerformed#0;class#6742:7256" expanded="false" />
+            <element signature="class#8007:9409" expanded="false" />
+            <element signature="class#9684:10200" expanded="false" />
+            <element signature="class#10969:12386" expanded="false" />
+            <element signature="method#actionPerformed#0;class#10969:12386" expanded="false" />
+            <element signature="class#14001:15305" expanded="false" />
+            <element signature="class#19837:21247" expanded="false" />
+            <element signature="class#22856:24157" expanded="false" />
+            <element signature="class#27390:27908" expanded="false" />
+            <element signature="method#actionPerformed#0;class#27390:27908" expanded="false" />
+            <element signature="class#28678:30091" expanded="false" />
+            <element signature="class#30366:30888" expanded="false" />
+            <element signature="class#31548:33108" expanded="false" />
+            <element signature="class#33385:33902" expanded="false" />
+            <marker date="1481453272591" expanded="true" signature="5311:5712" ph="INSERT INTO armbyh.waybill... " />
+            <marker date="1481453272591" expanded="true" signature="8454:8646" ph="INSERT INTO armbyh.consignee... " />
+            <marker date="1481453272591" expanded="true" signature="11416:11623" ph="INSERT INTO armbyh.infofficial... " />
+            <marker date="1481453272591" expanded="true" signature="14382:14546" ph="INSERT INTO armbyh.infpayer... " />
+            <marker date="1481453272591" expanded="true" signature="17320:17535" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="20283:20491" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="23236:23400" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="false" signature="25723:27114" ph="{...}" />
+            <marker date="1481453272591" expanded="true" signature="26152:26329" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="true" signature="26152:26355" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29258" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29328" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32206" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32215" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32216" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="false" signature="32127:32289" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32293" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32298" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32311" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32325" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32326" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32339" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32340" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32353" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="34342:34464" ph="DELETE FROM " />
+            <marker date="1481453272591" expanded="true" signature="34491:34505" ph="select * fro... missingValue" />
           </folding>
         </state>
       </provider>
@@ -974,18 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.waybill">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1021,76 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.infproduct">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.infmanufacturer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.bankdetails">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.infissue">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.consignee">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1117,13 +1092,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.waybill">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.bankdetails">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.infofficial">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.infissue">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.infproduct">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1a6d5f98/d9f6fc46-ccc3-4b8e-a196-de2b678e3751/armbyh.infmanufacturer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DatabaseTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dorm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="119">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="method#Waybill#0;class#dorm#0" expanded="false" />
             <element signature="method#createConsignee#0;class#dorm#0" expanded="false" />
+            <element signature="method#infOrganization#0;class#dorm#0" expanded="false" />
             <element signature="method#infProduct#0;class#dorm#0" expanded="false" />
             <element signature="method#infPayer#0;class#dorm#0" expanded="false" />
             <element signature="method#infSupply#0;class#dorm#0" expanded="false" />
@@ -1137,41 +1209,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="91" selection-start-line="23" selection-start-column="91" selection-end-line="23" selection-end-column="91" />
+        <state relative-caret-position="180">
+          <caret line="106" column="48" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="48" />
           <folding>
             <element signature="docComment;class#GUI#0" expanded="false" />
-            <element signature="class#3650:5787" expanded="false" />
-            <element signature="class#6758:8160" expanded="false" />
-            <element signature="class#11604:12908" expanded="false" />
-            <element signature="class#16297:17707" expanded="false" />
-            <element signature="class#18746:20047" expanded="false" />
-            <element signature="class#23459:24872" expanded="false" />
-            <element signature="class#25752:27312" expanded="false" />
-            <marker date="1481450234379" expanded="true" signature="4631:5032" ph="INSERT INTO armbyh.waybill... " />
-            <marker date="1481450234379" expanded="true" signature="7205:7397" ph="INSERT INTO armbyh.consignee... " />
-            <marker date="1481450234379" expanded="true" signature="9596:9803" ph="INSERT INTO armbyh.infofficial... " />
-            <marker date="1481450234379" expanded="true" signature="11985:12149" ph="INSERT INTO armbyh.infpayer... " />
-            <marker date="1481450234379" expanded="true" signature="14350:14565" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="16743:16951" ph="INSERT INTO armbyh.infissue... " />
-            <marker date="1481450234379" expanded="true" signature="19126:19290" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="false" signature="21042:22433" ph="{...}" />
-            <marker date="1481450234379" expanded="true" signature="21471:21648" ph="INSERT INTO armbyh.bankdetails... " />
-            <marker date="1481450234379" expanded="true" signature="21471:21674" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24039" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="23905:24109" ph="INSERT INTO armbyh.infmanufacturer... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26410" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26419" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26420" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26493" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26497" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26502" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26515" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26529" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26530" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26543" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26544" ph="INSERT INTO armbyh.infproduct... " />
-            <marker date="1481450234379" expanded="true" signature="26331:26557" ph="INSERT INTO armbyh.infproduct... " />
+            <element signature="class#6742:7256" expanded="false" />
+            <element signature="method#actionPerformed#0;class#6742:7256" expanded="false" />
+            <element signature="class#8007:9409" expanded="false" />
+            <element signature="class#9684:10200" expanded="false" />
+            <element signature="class#10969:12386" expanded="false" />
+            <element signature="method#actionPerformed#0;class#10969:12386" expanded="false" />
+            <element signature="class#14001:15305" expanded="false" />
+            <element signature="class#19837:21247" expanded="false" />
+            <element signature="class#22856:24157" expanded="false" />
+            <element signature="class#27390:27908" expanded="false" />
+            <element signature="method#actionPerformed#0;class#27390:27908" expanded="false" />
+            <element signature="class#28678:30091" expanded="false" />
+            <element signature="class#30366:30888" expanded="false" />
+            <element signature="class#31548:33108" expanded="false" />
+            <element signature="class#33385:33902" expanded="false" />
+            <marker date="1481453272591" expanded="true" signature="5311:5712" ph="INSERT INTO armbyh.waybill... " />
+            <marker date="1481453272591" expanded="true" signature="8454:8646" ph="INSERT INTO armbyh.consignee... " />
+            <marker date="1481453272591" expanded="true" signature="11416:11623" ph="INSERT INTO armbyh.infofficial... " />
+            <marker date="1481453272591" expanded="true" signature="14382:14546" ph="INSERT INTO armbyh.infpayer... " />
+            <marker date="1481453272591" expanded="true" signature="17320:17535" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="20283:20491" ph="INSERT INTO armbyh.infissue... " />
+            <marker date="1481453272591" expanded="true" signature="23236:23400" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="false" signature="25723:27114" ph="{...}" />
+            <marker date="1481453272591" expanded="true" signature="26152:26329" ph="INSERT INTO armbyh.bankdetails... " />
+            <marker date="1481453272591" expanded="true" signature="26152:26355" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29258" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="29124:29328" ph="INSERT INTO armbyh.infmanufacturer... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32206" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32215" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32216" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="false" signature="32127:32289" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32293" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32298" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32311" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32325" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32326" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32339" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32340" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="32127:32353" ph="INSERT INTO armbyh.infproduct... " />
+            <marker date="1481453272591" expanded="true" signature="34342:34464" ph="DELETE FROM " />
+            <marker date="1481453272591" expanded="true" signature="34491:34505" ph="select * fro... missingValue" />
           </folding>
         </state>
       </provider>
