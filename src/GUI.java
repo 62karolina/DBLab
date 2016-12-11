@@ -95,7 +95,7 @@ public class GUI{
         pane.add(textField12).setVisible(true);
 
 
-        st = con.createStatement(); // НЕ ТРОГАТЬ!!!!
+        st = con.createStatement(); // НЕ ТРОГАТЬ, НЕ УДАЛЯТЬ БОЛЬШЕ!!!!
 
         comboBox.addItemListener(new ItemListener() {
             @Override
@@ -124,7 +124,7 @@ public class GUI{
                                 String s1 = textField1.getText();
                                 String s2 = textField2.getText();
                                 String s3 = textField3.getText();
-                                String s4 = textField3.getText();
+                                String s4 = textField4.getText();
                                 String s5 = textField5.getText();
                                 String s6 = textField6.getText();
                                 String s7 = textField7.getText();
@@ -135,7 +135,7 @@ public class GUI{
                                 String s12 = textField12.getText();
 
                                 String updateSQL = "INSERT INTO armbyh.waybill (Id_wb, NoWB, NameProduct, Organization, DateOfIssue, Official, Supplier, id_infPr, Id_Official, Id_organ, Id_issue, Id_consignee)" +
-                                        " VALUES (" + Integer.valueOf(s1) + ", '" + s2 + "', '" + s3  + "', '" + s4  + ", '" + s5 + "', '" + s6  + "', '" + s7  + ", '" + s8 + "', '" + s9  + "', '" + s10 + "', '" + s11  + "', '" + s12  + "');";
+                                        " VALUES (" + Integer.valueOf(s1) + ", '" + s2 + "', '" + s3  + "', '" + s4  + "', '" + s5 + "', '" + s6  + "', '" + s7  + "', '" + s8 + "', '" + s9  + "', '" + s10 + "', '" + s11  + "', '" + s12  + "');";
                                 try {
                                     st.executeUpdate(updateSQL);
                                     try {
@@ -188,7 +188,7 @@ public class GUI{
                                 String s1 = textField1.getText();
                                 String s2 = textField2.getText();
                                 String s3 = textField3.getText();
-                                String s4 = textField3.getText();
+                                String s4 = textField4.getText();
 
                                 String updateSQL = "INSERT INTO armbyh.consignee (Id_consignee, Name, Adress, Id_payes)" +
                                         " VALUES (" + Integer.valueOf(s1) + ", '" + s2 + "', '" + s3  + "', '" + s4  +"');";
@@ -244,7 +244,7 @@ public class GUI{
                                 String s1 = textField1.getText();
                                 String s2 = textField2.getText();
                                 String s3 = textField3.getText();
-                                String s4 = textField3.getText();
+                                String s4 = textField4.getText();
 
                                 String updateSQL = "INSERT INTO armbyh.inforganization (Id_organ, FIOofficial, NoLicense, DateOfIssue)" +
                                         " VALUES (" + Integer.valueOf(s1) + ", '" + s2 + "', '" + s3  + "', '" + s4  +"');";
@@ -355,10 +355,10 @@ public class GUI{
                                 String s1 = textField1.getText();
                                 String s2 = textField2.getText();
                                 String s3 = textField3.getText();
-                                String s4 = textField3.getText();
-                                String s5 = textField3.getText();
+                                String s4 = textField4.getText();
+                                String s5 = textField5.getText();
 
-                                String updateSQL = "INSERT INTO armbyh.infpayer (Id_payer, NameIE, Adress, Tel., Id_bankDetails)" +
+                                String updateSQL = "INSERT INTO armbyh.infpayer (Id_payer, NameIE, Adress, Tel, Id_bankDetails)" +
                                         " VALUES (" + Integer.valueOf(s1) + ", '" + s2 + "', '" + s3  + "', '" + s4 + "', '" + s5 + "');";
                                 try {
                                     st.executeUpdate(updateSQL);
@@ -412,7 +412,7 @@ public class GUI{
                                 String s1 = textField1.getText();
                                 String s2 = textField2.getText();
                                 String s3 = textField3.getText();
-                                String s4 = textField3.getText();
+                                String s4 = textField4.getText();
                                 String updateSQL = "INSERT INTO armbyh.infissue (Id_issue, DateOfIssue, ResponsibleOfficial, Id_supply)" +
                                         " VALUES (" + Integer.valueOf(s1) + ", '" + s2 + "', '" + s3  + "', '" + s4 + "');";
                                 try {
