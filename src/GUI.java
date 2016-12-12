@@ -73,13 +73,21 @@ public class GUI{
         pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
         panel.add(pane, BorderLayout.LINE_START);
 
-
+        Container t = new Container();
+        t.setLayout(new BoxLayout(t, BoxLayout.X_AXIS));
+        panel.add(t, BorderLayout.PAGE_END);
 
         comboBox = new JComboBox(data);
         panel.add(comboBox, BorderLayout.PAGE_START);
 
+        JComboBox find = new JComboBox();
+        t.add(find);
+
         sortBy = new JComboBox();
-        panel.add(sortBy, BorderLayout.PAGE_END);
+        t.add(sortBy);
+
+        JTextField findBy = new JTextField();
+        t.add(findBy);
 
         JButton button = new JButton("Добавить данные");
         pane.add(button);
@@ -809,7 +817,7 @@ public class GUI{
                         @Override
                         public void itemStateChanged(ItemEvent e) {
                             String sq = String.valueOf(sortBy.getSelectedItem());
-                            if((sortBy.getSelectedItem() == "Id_Man") || (sortBy.getSelectedItem() == "DateOfSupply ") || (sortBy.getSelectedItem() == "Manufacturer")){
+                            if((sortBy.getSelectedItem() == "Id_Man") || (sortBy.getSelectedItem() == "DateOfSupply") || (sortBy.getSelectedItem() == "Manufacturer")){
                                 try {
                                     sortBy("infmanufacturer", sq);
                                 } catch (SQLException e1) {
@@ -826,6 +834,7 @@ public class GUI{
 
                 if(comboBox.getSelectedItem() == "Информация о продукте"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField7.setVisible(false);
                     textField8.setVisible(false);
                     textField9.setVisible(false);
@@ -907,6 +916,32 @@ public class GUI{
                             }
                         }
                     });
+                    find.addItem("Id_prod");
+                    find.addItem("Name");
+                    find.addItem("Price");
+                    find.addItem("Count");
+                    find.addItem("Supplier");
+
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_prod") || (find.getSelectedItem() == "Name") || (find.getSelectedItem() == "Price")
+                                    || (find.getSelectedItem() == "Count") || (find.getSelectedItem() == "Supplier")){
+                                try {
+                                    findBy("infproduct", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+
                 }
             }
         });
@@ -919,7 +954,7 @@ public class GUI{
 
     }
 
-    public void delete(String string) throws SQLException, ClassNotFoundException {
+    private void delete(String string) throws SQLException, ClassNotFoundException {
         int row = table.getSelectedRow();
         int column = table.getSelectedColumn();
         Object value = table.getValueAt(row, column);
@@ -935,10 +970,16 @@ public class GUI{
 
 
 
-    public void sortBy(String string, String s1) throws SQLException, ClassNotFoundException {
+    private void sortBy(String string, String s1) throws SQLException, ClassNotFoundException {
         String requestSort = "select * from " + string + " order by " + s1 + ";";
         ResultSet rss = st.executeQuery(requestSort);
         model.setDataSource(rss);
+    }
+
+    private void findBy(String string, String n, String s1 ) throws SQLException, ClassNotFoundException {
+        String findBy = "select * from " + string + " where " + n + " like '" + s1 + "%';";
+        ResultSet rs = st.executeQuery(findBy);
+        model.setDataSource(rs);
     }
 
 }
