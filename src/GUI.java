@@ -1,10 +1,23 @@
 import javax.swing.*;
+import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
+import java.text.ParseException;
+
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.util.IOUtils;
 
 /**
  * Created by Каролина on 08.12.2016.
@@ -56,6 +69,11 @@ public class GUI{
         JTextField textField11 = new JTextField();
         JTextField textField12 = new JTextField();
 
+        JLabel sortLabel = new JLabel("Сортировть");
+        JLabel searchL = new JLabel("Поиск");
+
+
+
 
 
 
@@ -80,14 +98,19 @@ public class GUI{
         comboBox = new JComboBox(data);
         panel.add(comboBox, BorderLayout.PAGE_START);
 
-        JComboBox find = new JComboBox();
-        t.add(find);
 
+
+        t.add(sortLabel);
         sortBy = new JComboBox();
         t.add(sortBy);
 
+        t.add(searchL);
+        JComboBox find = new JComboBox();
+        t.add(find);
         JTextField findBy = new JTextField();
         t.add(findBy);
+
+
 
         JButton button = new JButton("Добавить данные");
         pane.add(button);
@@ -110,7 +133,8 @@ public class GUI{
         pane.add(textField10).setVisible(true);
         pane.add(textField11).setVisible(true);
         pane.add(textField12).setVisible(true);
-
+        JButton expExel = new JButton("Экспорт в Txt");
+        pane.add(expExel);
 
         st = con.createStatement(); // НЕ ТРОГАТЬ, НЕ УДАЛЯТЬ БОЛЬШЕ!!!!
 
@@ -119,6 +143,7 @@ public class GUI{
             public void itemStateChanged(ItemEvent e) {
                 if(comboBox.getSelectedItem() == "Торговая накладная"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField1.setVisible(true);
                     textField2.setVisible(true);
                     textField3.setVisible(true);
@@ -211,9 +236,51 @@ public class GUI{
                             }
                         }
                     });
+
+                    find.addItem("Id_wb");
+                    find.addItem("NoWB");
+                    find.addItem("NameProduct");
+                    find.addItem("Organization");
+                    find.addItem("DateOfIssue");
+                    find.addItem("Official");
+                    find.addItem("Supplier");
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_wb") || (find.getSelectedItem() == "NoWB")|| (find.getSelectedItem() == "NameProduct")
+                                    || (find.getSelectedItem() == "Name") || (find.getSelectedItem() == "Organization")
+                                    || (find.getSelectedItem() == "DateOfIssue")|| (find.getSelectedItem() == "Official")
+                                    || (find.getSelectedItem() == "Supplier")){
+                                try {
+                                    findBy("waybill", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("waybill.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Заказчик"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -285,9 +352,44 @@ public class GUI{
                             }
                         }
                     });
+
+                    find.addItem("Id_consignee");
+                    find.addItem("Name");
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_consignee")
+                                    || (find.getSelectedItem() == "Name")){
+                                try {
+                                    findBy("inforganization", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("consignee.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация об организациии"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -362,9 +464,46 @@ public class GUI{
                             }
                         }
                     });
+
+                    find.addItem("Id_organ");
+                    find.addItem("FIOofficial");
+                    find.addItem("NoLicense");
+                    find.addItem("DateOfIssue");
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_organ") || (find.getSelectedItem() == "FIOofficial")
+                                    || (find.getSelectedItem() == "NoLicense") || (find.getSelectedItem() == "DateOfIssue")){
+                                try {
+                                    findBy("inforganization", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("inforganization.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о должностном лице"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField4.setVisible(false);
                     textField5.setVisible(false);
                     textField6.setVisible(false);
@@ -438,9 +577,45 @@ public class GUI{
                             }
                         }
                     });
+
+                    find.addItem("Id_off");
+                    find.addItem("FIO");
+                    find.addItem("ThePost");
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_off") || (find.getSelectedItem() == "FIO")
+                                    || (find.getSelectedItem() == "ThePost")){
+                                try {
+                                    findBy("infofficial", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("infofficial.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Инфрмация о плательщике"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField6.setVisible(false);
                     textField7.setVisible(false);
                     textField8.setVisible(false);
@@ -514,9 +689,45 @@ public class GUI{
                             }
                         }
                     });
+
+                    find.addItem("Id_payer");
+                    find.addItem("NameIE");
+                    find.addItem("Tel");
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_payer") || (find.getSelectedItem() == "NameIE")
+                                    || (find.getSelectedItem() == "Tel")){
+                                try {
+                                    findBy("infissue", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("infpayer.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о выписке"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -590,9 +801,45 @@ public class GUI{
                         }
                     });
 
+                    find.addItem("Id_issue");
+                    find.addItem("DateOfIssue");
+                    find.addItem("ResponsibleOfficial");
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_issue") || (find.getSelectedItem() == "DateOfIssue")
+                                    || (find.getSelectedItem() == "ResponsibleOfficial")){
+                                try {
+                                    findBy("infissue", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("infissue.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
+
                 }
                 if(comboBox.getSelectedItem() == "Информация об ответственном лице"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField4.setVisible(false);
                     textField5.setVisible(false);
                     textField6.setVisible(false);
@@ -666,9 +913,45 @@ public class GUI{
                             }
                         }
                     });
+
+                    find.addItem("Id_supply");
+                    find.addItem("FIO");
+                    find.addItem("ThePost");
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_supply") || (find.getSelectedItem() == "FIO")
+                                    || (find.getSelectedItem() == "ThePost")){
+                                try {
+                                    findBy("infsupply", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("infsupply.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
                 if(comboBox.getSelectedItem() == "Информация о банке"){
                     sortBy.removeAllItems();
+                    find.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -743,10 +1026,46 @@ public class GUI{
                             }
                         }
                     });
+
+                    find.addItem("Id_BD");
+                    find.addItem("ChekingAccount");
+                    find.addItem("NameBank");
+
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_BD") || (find.getSelectedItem() == "ChekingAccount")
+                                    || (find.getSelectedItem() == "NameBank")){
+                                try {
+                                    findBy("bankdetails", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("bankdetails.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
+
                 }
                 if(comboBox.getSelectedItem() == "Информация о производителе"){
                     sortBy.removeAllItems();
-                    //sortBy.addItem("");
+                    find.removeAllItems();
                     textField5.setVisible(false);
                     textField6.setVisible(false);
                     textField7.setVisible(false);
@@ -829,7 +1148,40 @@ public class GUI{
                         }
                     });
 
+                    find.addItem("Id_Man");
+                    find.addItem("Manufacturer");
+                    find.addItem("DateOfSupply");
 
+                    find.addItemListener(new ItemListener() {
+                        @Override
+                        public void itemStateChanged(ItemEvent e) {
+                            String sq = String.valueOf(find.getSelectedItem());
+                            String editL = findBy.getText();
+                            if((find.getSelectedItem() == "Id_Man") || (find.getSelectedItem() == "Manufacturer")
+                                    || (find.getSelectedItem() == "DateOfSupply")){
+                                try {
+                                    findBy("infmanufacturer", sq, editL);
+                                } catch (SQLException e1) {
+                                    e1.printStackTrace();
+                                } catch (ClassNotFoundException e1) {
+                                    e1.printStackTrace();
+                                }
+                            }
+                        }
+                    });
+
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("infmanufacturer.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
                 }
 
                 if(comboBox.getSelectedItem() == "Информация о продукте"){
@@ -940,7 +1292,18 @@ public class GUI{
                             }
                         }
                     });
-
+                    expExel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                export(table, new File("infproduct.txt"));
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    });
 
                 }
             }
@@ -980,6 +1343,32 @@ public class GUI{
         String findBy = "select * from " + string + " where " + n + " like '" + s1 + "%';";
         ResultSet rs = st.executeQuery(findBy);
         model.setDataSource(rs);
+    }
+
+    private void export(JTable table, File file) throws ParseException, IOException {
+        try{
+            TableModel model = table.getModel();
+            FileWriter excel = new FileWriter(file);
+
+            for(int i = 0; i < model.getColumnCount(); i++){
+                excel.write(model.getColumnName(i) + "\t" + "\n");
+            }
+
+            excel.write("\n");
+
+            for(int i=0; i< model.getRowCount(); i++) {
+                for(int j=0; j < model.getColumnCount(); j++) {
+                    excel.write(model.getValueAt(i,j).toString()+"\t"+"\n");
+                    excel.write("\n");
+                }
+                excel.write("\n");
+            }
+
+            excel.close();
+
+        }catch(IOException e){ System.out.println(e); }
+
+
     }
 
 }
