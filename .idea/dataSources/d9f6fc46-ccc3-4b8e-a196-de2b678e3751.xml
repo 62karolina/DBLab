@@ -148,7 +148,7 @@
     <column id="52" parent="13" name="Adress">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="53" parent="13" name="Tel.">
+    <column id="53" parent="13" name="Tel">
       <data-type>int(11)|0</data-type>
     </column>
     <column id="54" parent="13" name="Id_bankDetails">

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_kyrsovaya" default="compile.module.kyrsovaya">
+  <dirname property="module.kyrsovaya.basedir" file="${ant.file.module_kyrsovaya}"/>
+  
+  <property name="module.jdk.home.kyrsovaya" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.kyrsovaya" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.kyrsovaya" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.kyrsovaya" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="kyrsovaya.output.dir" value="${module.kyrsovaya.basedir}/out/production/Kyrsovaya"/>
+  <property name="kyrsovaya.testoutput.dir" value="${module.kyrsovaya.basedir}/out/test/Kyrsovaya"/>
+  
+  <path id="kyrsovaya.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="kyrsovaya.module.production.classpath">
+    <path refid="${module.jdk.classpath.kyrsovaya}"/>
+  </path>
+  
+  <path id="kyrsovaya.runtime.production.module.classpath">
+    <pathelement location="${kyrsovaya.output.dir}"/>
+  </path>
+  
+  <path id="kyrsovaya.module.classpath">
+    <path refid="${module.jdk.classpath.kyrsovaya}"/>
+    <pathelement location="${kyrsovaya.output.dir}"/>
+  </path>
+  
+  <path id="kyrsovaya.runtime.module.classpath">
+    <pathelement location="${kyrsovaya.testoutput.dir}"/>
+    <pathelement location="${kyrsovaya.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.kyrsovaya">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.kyrsovaya">
+    <patternset refid="excluded.from.module.kyrsovaya"/>
+  </patternset>
+  
+  <path id="kyrsovaya.module.sourcepath">
+    <dirset dir="${module.kyrsovaya.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.kyrsovaya" depends="compile.module.kyrsovaya.production,compile.module.kyrsovaya.tests" description="Compile module Kyrsovaya"/>
+  
+  <target name="compile.module.kyrsovaya.production" depends="register.custom.compilers" description="Compile module Kyrsovaya; production classes">
+    <mkdir dir="${kyrsovaya.output.dir}"/>
+    <javac2 destdir="${kyrsovaya.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.kyrsovaya}/javac">
+      <compilerarg line="${compiler.args.kyrsovaya}"/>
+      <bootclasspath refid="kyrsovaya.module.bootclasspath"/>
+      <classpath refid="kyrsovaya.module.production.classpath"/>
+      <src refid="kyrsovaya.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.kyrsovaya"/>
+    </javac2>
+    
+    <copy todir="${kyrsovaya.output.dir}">
+      <fileset dir="${module.kyrsovaya.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.kyrsovaya.tests" depends="register.custom.compilers,compile.module.kyrsovaya.production" description="compile module Kyrsovaya; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.kyrsovaya" description="cleanup module">
+    <delete dir="${kyrsovaya.output.dir}"/>
+    <delete dir="${kyrsovaya.testoutput.dir}"/>
+  </target>
+</project>

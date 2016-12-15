@@ -1,0 +1,4 @@
+id_prod	Name	Price	Count	Supplier	Id_manuf	
+1	Drink	50	5	Deep Inc.	1	
+2	Drink	60	6	Deep Inc.	2	
+3	Food	30	20	Resq	4	
